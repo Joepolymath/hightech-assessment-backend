@@ -51,14 +51,12 @@ class MessageServices {
     };
     delete query.limit;
     delete query.skip;
-    console.log({ query });
 
     let queryData = {
       filter: { ...query, messageTo: userId },
       skip: pagination.skip || 0,
       limit: pagination.limit || 0,
     };
-    console.log(queryData);
     const foundMessages = await this.messageRepo.findAll(queryData, [
       'user messageTo',
     ]);

@@ -44,6 +44,7 @@ class DAL<T extends Document> {
       .find(query.filter)
       .populate(populateData[0], populateData[1])
       .select(selectData)
+      .sort({ createdAt: -1 })
       .skip(query.skip)
       .limit(query.limit);
   }
