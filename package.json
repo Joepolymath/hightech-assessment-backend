@@ -8,7 +8,6 @@
     "start": "node build/bin/www.js",
     "build": "rimraf dist && tsc -p .",
     "clean": "rimraf dist",
-    "prepare": "husky",
     "test": "jest",
     "test:watch": "jest --watchAll",
     "test:coverage": "jest --coverage"
