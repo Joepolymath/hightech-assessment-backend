@@ -7,10 +7,9 @@ import logger from '../shared/configs/logs.config';
 import App from '../app';
 // import AuthController from '../modules/auth/auth.controller';
 import connectDb from '../shared/configs/db.config';
+import UserController from '../modules/users/controllers';
 
-const app = new App([
-  //   new AuthController(),
-]);
+const app = new App([new UserController()]);
 
 const debug = debugLib('hightech:server');
 
