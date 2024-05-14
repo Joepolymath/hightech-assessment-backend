@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/bin/www.ts",
-    "start": "node build/bin/www.ts",
+    "start": "node build/bin/www.js",
     "build": "rimraf dist && tsc -p .",
     "clean": "rimraf dist",
     "prepare": "husky",
