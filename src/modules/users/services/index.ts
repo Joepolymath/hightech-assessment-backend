@@ -12,7 +12,12 @@ class UsersServices {
   constructor() {}
 
   public async signUp(payload: IUserLoc) {
-    const foundUser = await this.userRepo.findOne({ email: payload.email });
+    let queryData = {
+      filter: { email: payload.email },
+      skip: 0,
+      limit: 0,
+    };
+    const foundUser = await this.userRepo.findOne(queryData);
 
     if (foundUser) {
       return new HttpException(400, 'Email exists');

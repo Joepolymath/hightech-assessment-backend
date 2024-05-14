@@ -15,6 +15,10 @@ const userSchema = new mongoose.Schema<IUser>(
     password: {
       type: String,
     },
+    profileImage: {
+      type: String,
+      default: 'https://via.placeholder.com/150',
+    },
   },
   {
     timestamps: true,

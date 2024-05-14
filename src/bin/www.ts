@@ -8,8 +8,14 @@ import App from '../app';
 // import AuthController from '../modules/auth/auth.controller';
 import connectDb from '../shared/configs/db.config';
 import UserController from '../modules/users/controllers';
+import AuthControllers from '../modules/auth/controllers';
+import MessageController from '../modules/messages/controllers';
 
-const app = new App([new UserController()]);
+const app = new App([
+  new UserController(),
+  new AuthControllers(),
+  new MessageController(),
+]);
 
 const debug = debugLib('hightech:server');
 
