@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "nodemon src/bin/www.ts",
     "start": "node build/bin/www.js",
-    "build": "rimraf dist && tsc -p .",
-    "clean": "rimraf dist",
+    "build": "rimraf build && tsc -p .",
+    "clean": "rimraf build",
     "test": "jest",
     "test:watch": "jest --watchAll",
     "test:coverage": "jest --coverage"
